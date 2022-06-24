@@ -27,8 +27,10 @@ namespace ContosoUniversity.Controllers
                 int? pageNumber)
         {
             // set asp-route-sortOrder for name and date
-            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            // basically, by pressing LastName or EnrollmentDate on the Index form, we send an HTTP request with the sortOrder parameter
+            ViewData["NameSortParm"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["CurrentSort"] = sortOrder;
             ViewData["CurrentFilter"] = searchString;
 
             if (searchString != null)
