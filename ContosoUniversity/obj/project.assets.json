@@ -7173,6 +7173,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.17",
+      "Microsoft.EntityFrameworkCore.Relational >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
@@ -7223,6 +7224,10 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.17, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[5.0.17, )"
           },
